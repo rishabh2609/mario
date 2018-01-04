@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="38" tilewidth="21" tileheight="21" nextobjectid="9">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="38" tilewidth="21" tileheight="21" nextobjectid="10">
  <tileset firstgid="1" name="spritesheet" tilewidth="21" tileheight="21" spacing="2" tilecount="900" columns="30">
   <image source="../images/spritesheet.png" width="692" height="692"/>
   <tile id="19">
@@ -10,6 +10,11 @@
   <tile id="354">
    <properties>
     <property name="Class" value="Bee"/>
+   </properties>
+  </tile>
+  <tile id="376">
+   <properties>
+    <property name="Class" value="Gem"/>
    </properties>
   </tile>
  </tileset>
@@ -5967,5 +5972,6 @@
   <object id="1" gid="20" x="62" y="691.333" width="21" height="21"/>
   <object id="7" gid="355" x="398.909" y="170.909" width="21" height="21"/>
   <object id="8" gid="355" x="799" y="651" width="21" height="21"/>
+  <object id="9" gid="377" x="1031" y="355" width="21" height="21"/>
  </objectgroup>
 </map>

@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
 	var Q = window.Q = Quintus({development: true})
 	.include("Scenes, Sprites, 2D, Input, Touch, TMX, UI, Audio")
-	.include("playerComponent, beeComponent")
+	.include("playerComponent, beeComponent, gemComponent")
 	.setup({
 		scaleToFit: true
 	}).controls().touch();
