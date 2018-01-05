@@ -5,7 +5,12 @@ window.addEventListener("load", function() {
 	.setup({
 		scaleToFit: true,
 		width: 320,
-		height: 240
+		height: 240,
+		upsampleWidth:  420,  // Double the pixel density of the 
+		upsampleHeight: 320,  // game if the w or h is 420x320
+		                    // or smaller (useful for retina phones)
+		downsampleWidth: 1024, // Halve the pixel density if resolution
+		downsampleHeight: 768 
 	}).controls(true).touch();
 	
 	Q.setImageSmoothing(false);
@@ -15,12 +20,12 @@ window.addEventListener("load", function() {
 		Q.input.drawCircle(joypad.centerX,
 		                   joypad.centerY,
 		                   joypad.background,
-		                   Math.PI * 3 * 3);
+		                   Math.PI * 2.5 * 2.5);
 
 		  Q.input.drawCircle(joypad.x,
 		                   joypad.y,
 		                   joypad.color,
-		                   Math.PI * 1 * 1);
+		                   Math.PI * 1.5 * 1.5);
 		
 			
 	}
