@@ -1,11 +1,21 @@
+var w, h;
+
+if(window.innerHeight > window.innerWidth) {
+	w = 240;
+	h = 320;
+} else {
+	w = 320;
+	h = 240;
+}
+
 window.addEventListener("load", function() {
 	var Q = window.Q = Quintus({development: true})
 	.include("Scenes, Sprites, 2D, Input, Touch, TMX, UI, Audio")
 	.include("playerComponent, beeComponent, gemComponent, enemyComponent")
 	.setup({
 		scaleToFit: true,
-		width: 320,
-		height: 240,
+		width: w,
+		height: h,
 		upsampleWidth:  420,  // Double the pixel density of the 
 		upsampleHeight: 320,  // game if the w or h is 420x320
 		                    // or smaller (useful for retina phones)
