@@ -1,11 +1,15 @@
 window.addEventListener("load", function() {
 	var Q = window.Q = Quintus({development: true})
 	.include("Scenes, Sprites, 2D, Input, Touch, TMX, UI, Audio")
-	.include("playerComponent, beeComponent, gemComponent")
+	.include("playerComponent, beeComponent, gemComponent, enemyComponent")
 	.setup({
-		scaleToFit: true
+		scaleToFit: true,
+		width: 320,
+		height: 240
 	}).controls().touch();
 	
+	Q.setImageSmoothing(false);
+
 	Q.scene("level1", function(stage) {
 		var player;
 		Q.stageTMX("level.tmx", stage);

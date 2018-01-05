@@ -19,7 +19,7 @@ Quintus.beeComponent = function(Q) {
 			});
 			this.on("hit.sprite", function(col) {
 				if(col.obj.isA("Player")) {
-					col.obj.destroy();
+					Q.stageScene("level1");
 					alert("You died!");
 				}
 			});
