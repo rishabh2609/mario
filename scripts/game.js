@@ -10,6 +10,21 @@ window.addEventListener("load", function() {
 	
 	Q.setImageSmoothing(false);
 
+	Q.input.drawJoypad = function() {
+		var joypad = Q.joypad;
+		Q.input.drawCircle(joypad.centerX,
+		                   joypad.centerY,
+		                   joypad.background,
+		                   Math.PI * 3 * 3);
+
+		  Q.input.drawCircle(joypad.x,
+		                   joypad.y,
+		                   joypad.color,
+		                   Math.PI * 1 * 1);
+		
+			
+	}
+
 	Q.input.drawButtons = function() {
 		var keypad = Q.input.keypad,
           ctx = Q.ctx;
