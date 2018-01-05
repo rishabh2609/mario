@@ -6,9 +6,20 @@ window.addEventListener("load", function() {
 		scaleToFit: true,
 		width: 320,
 		height: 240
-	}).controls().touch();
+	}).controls(true).touch();
 	
 	Q.setImageSmoothing(false);
+
+	Q.input.drawButtons = function() {
+		var keypad = Q.input.keypad,
+          ctx = Q.ctx;
+ 
+      ctx.save();
+      ctx.textAlign = "center"; 
+      ctx.textBaseline = "middle";
+ 
+      ctx.restore();
+	}
 
 	Q.scene("level1", function(stage) {
 		var player;
